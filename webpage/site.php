@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-print_r($_SESSION);exit;
+
 header('Cache-Control: no cache'); //no cache
 session_cache_limiter('private_no_expire');
 
@@ -13,7 +13,7 @@ if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )  || empty($
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
  
-
+print_r($_SESSION);exit;
 //Start Connection
 $curl = curl_init();
 

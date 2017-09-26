@@ -3,7 +3,7 @@ $attId = $_REQUEST['id'];
 
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
-
+print_r($_SESSION);exit;
 
 //Start Connection
 $curl = curl_init();
@@ -92,7 +92,7 @@ if(!empty($_POST['price'])){
 }
 ?>
 
-<?php echo $res['instance_url'];exit;if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
+<?php if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
 <html>
 <head>
 

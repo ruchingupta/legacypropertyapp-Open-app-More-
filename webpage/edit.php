@@ -1,8 +1,8 @@
 <?php session_start();
 $attId = $_REQUEST['id'];
-
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
+print_r($_SESSION);
+echo $username = $_SESSION['username'];
+echo $password = $_SESSION['password'];
 
 
 //Start Connection

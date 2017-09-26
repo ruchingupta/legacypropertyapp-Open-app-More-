@@ -37,7 +37,7 @@ session_start();
 header('Cache-Control: no cache'); //no cache
 session_cache_limiter('private_no_expire');
 
-if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )  || empty($_REQUEST['PHPSESSID'])){
+if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )){
 	echo "hima";
 	$_SESSION['username'] = $_REQUEST['username'];
 	$_SESSION['password'] = $_REQUEST['password'];

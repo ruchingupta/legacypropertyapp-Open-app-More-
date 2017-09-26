@@ -1,4 +1,6 @@
-<?php session_start(); 
+<?php 
+session_start(); 
+print_r($_SESSION);exit;
 header('Cache-Control: no cache'); //no cache
 session_cache_limiter('private_no_expire');
 

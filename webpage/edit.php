@@ -1,9 +1,9 @@
 <?php 
 session_start();
 $attId = $_REQUEST['id'];
-print_r($_SESSION);
-echo $username = $_SESSION['username'];
-echo $password = $_SESSION['password'];
+
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
 
 
 //Start Connection
@@ -34,7 +34,7 @@ $res = (array)json_decode($response);
 $access_token = $res['access_token'];
 
 $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
-print_r($res);
+
 //End Connection 
 
 

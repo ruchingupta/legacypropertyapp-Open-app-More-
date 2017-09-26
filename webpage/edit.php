@@ -92,7 +92,7 @@ if(!empty($_POST['price'])){
 }
 ?>
 
-<?php if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
+<?php echo $res['instance_url'];exit;if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
 <html>
 <head>
 

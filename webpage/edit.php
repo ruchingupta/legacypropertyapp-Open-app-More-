@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
 	CURLOPT_TIMEOUT => 30,
 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 	CURLOPT_CUSTOMREQUEST => "POST",
-	CURLOPT_POSTFIELDS => "client_id=3MVG9g9rbsTkKnAXEHsxzO08QzDD2_0GnIedlmVrxZWJcZtP_A8dGjmuGcDlZjeqXCEUgjUxIp_Sau3voeK1v&client_secret=1687696237180270615&grant_type=password&username=warren@yh.com&password=demo1234",
+	CURLOPT_POSTFIELDS => "client_id=3MVG9g9rbsTkKnAXEHsxzO08QzDD2_0GnIedlmVrxZWJcZtP_A8dGjmuGcDlZjeqXCEUgjUxIp_Sau3voeK1v&client_secret=1687696237180270615&grant_type=password&username=$username&password=$password",
 	CURLOPT_HTTPHEADER => array(
 	"cache-control: no-cache",
 	"content-type: application/x-www-form-urlencoded",

@@ -3,7 +3,7 @@ $attId = $_REQUEST['id'];
 
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
-print_r($_SESSION);exit;
+
 
 //Start Connection
 $curl = curl_init();
@@ -33,7 +33,7 @@ $res = (array)json_decode($response);
 $access_token = $res['access_token'];
 
 $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
-
+echo $res['instance_url'];exit;
 //End Connection 
 
 

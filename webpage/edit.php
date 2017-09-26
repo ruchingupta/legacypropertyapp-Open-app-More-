@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 $attId = $_REQUEST['id'];
 print_r($_SESSION);
 echo $username = $_SESSION['username'];
@@ -33,7 +34,7 @@ $res = (array)json_decode($response);
 $access_token = $res['access_token'];
 
 $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
-print_r($res);exit;
+print_r($res);
 //End Connection 
 
 
@@ -92,7 +93,7 @@ if(!empty($_POST['price'])){
 }
 ?>
 
-<?php if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
+<?php if(trim($res['instance_url']) == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
 <html>
 <head>
 

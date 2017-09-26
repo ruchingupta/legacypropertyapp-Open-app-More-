@@ -13,7 +13,7 @@ if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )  || empty($
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
  
-print_r($_SESSION);exit;
+print_r($_SESSION);
 //Start Connection
 $curl = curl_init();
 
@@ -227,7 +227,9 @@ $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
 
 </body>
 </html>
-<?php } else { ?>
-<?php header("Location: ../index.php"); ?>
+<?php } else {
+print_r($_SESSION);
+	?>
+<?php //header("Location: ../index.php"); ?>
 <?php } ?>
 

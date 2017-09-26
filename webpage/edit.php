@@ -33,7 +33,7 @@ $res = (array)json_decode($response);
 $access_token = $res['access_token'];
 
 $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
-echo $res['instance_url'];exit;
+print_r($res);exit;
 //End Connection 
 
 

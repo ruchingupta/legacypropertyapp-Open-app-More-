@@ -1,44 +1,9 @@
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
-    Dragonfruit Template 
-    http://www.templatemo.com/preview/templatemo_411_dragonfruit 
-    -->
-    <title>Property Detail</title>
-    <meta name="description" content="" />
-    <!-- templatemo 411 dragonfruit -->
-    <meta name="author" content="templatemo">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="./favicon.png" />		
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Camera -->
-    <link href="css/camera.css" rel="stylesheet">
-    <!-- Template  -->
-    <link href="css/templatemo_style.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
-  </head>
-<body>
-<?php 
-session_start(); 
-
+<?php session_start(); 
 header('Cache-Control: no cache'); //no cache
 session_cache_limiter('private_no_expire');
 
 if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )){
-	echo "hima";
+	
 	$_SESSION['username'] = $_REQUEST['username'];
 	$_SESSION['password'] = $_REQUEST['password'];
 }
@@ -46,7 +11,7 @@ if((!empty($_REQUEST['username']) && !empty($_REQUEST['password']) )){
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
  
-print_r($_SESSION);
+
 //Start Connection
 $curl = curl_init();
 
@@ -110,6 +75,42 @@ $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
 	
 ?>
 <?php if($res['instance_url'] == "https://ruchin-dev-ed.my.salesforce.com"){ ?>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    Dragonfruit Template 
+    http://www.templatemo.com/preview/templatemo_411_dragonfruit 
+    -->
+    <title>Property Detail</title>
+    <meta name="description" content="" />
+    <!-- templatemo 411 dragonfruit -->
+    <meta name="author" content="templatemo">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./favicon.png" />		
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Camera -->
+    <link href="css/camera.css" rel="stylesheet">
+    <!-- Template  -->
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+  </head>
+<body>
+
+
 
 
 <div id="templatemo_mobile_menu">
@@ -224,9 +225,7 @@ $instance_url = "https://ruchin-dev-ed.my.salesforce.com";
 
 </body>
 </html>
-<?php } else {
-print_r($_SESSION);
-	?>
-<?php //header("Location: ../index.php"); ?>
+<?php } else { ?>
+<?php header("Location: ../index.php"); ?>
 <?php } ?>
 
